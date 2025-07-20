@@ -5,7 +5,7 @@ import "./assets/App.css";
 
 // Pages
 
-import Home from "./pages/home";
+import Home from "./pages/Home";
 import Error from "./pages/Error";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
