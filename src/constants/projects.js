@@ -16,7 +16,7 @@ const projects = [
     ],
     live: "https://wanderlust-mern.vercel.app",
     github: "https://github.com/hardiksrivastavaa/Wanderlust-MERN",
-    image: "/projects/project1.png",
+    image: "/projects/project4.png",
   },
   {
     title: "UserDrive - File Storage App",
