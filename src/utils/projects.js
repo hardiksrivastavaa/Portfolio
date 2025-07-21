@@ -1,41 +1,32 @@
 const projects = [
+
   {
     title: "Wanderlust – Airbnb Clone",
-    description:
-      "A full-stack vacation rental app inspired by Airbnb. Includes CRUD listings, reviews, maps, image uploads (Cloudinary), and secure auth using Passport.js. Built with the MERN stack and deployed on Vercel following MVC architecture.",
-    tech: [
-      "MongoDB",
-      "Express.js",
-      "Node.js",
-      "Cloudinary",
-      "Passport.js",
-      "Bootstrap",
-      "HTML",
-      "CSS",
-      "JavaScript",
-    ],
+    description: "A full-stack vacation rental app inspired by Airbnb. Includes CRUD listings, reviews, maps, image uploads (Cloudinary), and secure auth using Passport.js. Built with the MERN stack and deployed on Vercel following MVC architecture.",
+    tech: [ "MongoDB", "Express.js", "Node.js", "Cloudinary", "Passport.js", "Bootstrap", "HTML", "CSS", "JavaScript"],
     live: "https://wanderlust-mern.vercel.app",
     github: "https://github.com/hardiksrivastavaa/Wanderlust-MERN",
     image: "/projects/project4.png",
   },
+
   {
     title: "UserDrive - File Storage App",
-    description:
-      "A cloud storage app to upload, manage, and access files securely. Built with Node.js, Express.js, and MongoDB Atlas. Uses Express sessions for auth and integrates Cloudinary for optimized media uploads.",
+    description: "A cloud storage app to upload, manage, and access files securely. Built with Node.js, Express.js, and MongoDB Atlas. Uses Express sessions for auth and integrates Cloudinary for optimized media uploads.",
     tech: ["Node.js", "Express.js", "MongoDB", "MongoDB Atlas", "Cloudinary"],
     live: "https://userdrive.vercel.app/",
     github: "https://github.com/hardiksrivastavaa/UserDriveApp",
     image: "/projects/project2.png",
   },
+
   {
     title: "Front Page Generator (FGP)",
-    description:
-      "A tool for UP diploma students to auto-generate PDF front pages for practicals. Users can customize fields like college, session, and teacher name. Used by 1000+ students, built with Tailwind and PDF-Lib.",
+    description: "A tool for UP diploma students to auto-generate PDF front pages for practicals. Users can customize fields like college, session, and teacher name. Used by 1000+ students, built with Tailwind and PDF-Lib.",
     tech: ["HTML", "CSS", "JavaScript", "Tailwind", "PDF-Lib"],
     live: "https://fpglatest.vercel.app",
     github: "https://github.com/hardiksrivastavaa/FPG_FGP",
     image: "/projects/project3.png",
   },
+  
 ];
 
 export default projects;

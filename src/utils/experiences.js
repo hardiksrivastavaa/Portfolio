@@ -1,4 +1,5 @@
 const experiences = [
+
   {
     title: "Google Arcade Facilitator Program",
     role: "Trainee",
@@ -8,6 +9,7 @@ const experiences = [
     image: "/certificates/arcade.jpg",
     borderColor: "border-yellow-500"
   },
+
   {
     title: "Summer Intern – Softpro India Computer Technologies",
     duration: "Jul 2024 – Sep 2024 (3 months)",
@@ -16,6 +18,7 @@ const experiences = [
     image: "/certificates/spi.jpg",
     borderColor: "border-orange-500"
   }
+  
 ];
 
 export default experiences;
