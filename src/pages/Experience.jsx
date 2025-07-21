@@ -1,6 +1,6 @@
 import React from "react";
 import useAOS from "../hooks/useAOS";
-import experiences from "../constants/experiences";
+import experiences from "../utils/experiences";
 
 const Experience = () => {
   useAOS(); // Initialize AOS once

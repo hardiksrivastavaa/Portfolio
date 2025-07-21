@@ -1,6 +1,6 @@
 import React from "react";
 import useAOS from "../hooks/useAOS";
-import projects from "../constants/projects";
+import projects from "../utils/projects";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const Projects = () => {

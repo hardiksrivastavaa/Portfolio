@@ -1,6 +1,6 @@
 import React from "react";
 import profilePic from "/myself/profile.jpg";
-import { resumeLink } from "../constants/links";
+import { resumeLink } from "../utils/links";
 import { FaGithub, FaLinkedin, FaDownload } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 
