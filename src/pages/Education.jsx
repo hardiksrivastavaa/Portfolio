@@ -1,6 +1,6 @@
 import React from "react";
 import useAOS from "../hooks/useAOS";
-import deltaCertificate from "../../public/certificates/mern.jpg";
+import deltaCertificate from "/certificates/mern.jpg";
 
 const Education = () => {
   useAOS(); // Initialize AOS globally

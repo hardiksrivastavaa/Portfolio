@@ -1,5 +1,6 @@
 import React from "react";
-import profilePic from "../../public/profile.jpg";
+import profilePic from "/myself/profile.jpg";
+import { resumeLink } from "../constants/links";
 import { FaGithub, FaLinkedin, FaDownload } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 
@@ -57,8 +58,8 @@ const Hero = () => {
           </a>
 
           <a
-            href="/Hardik_Srivastava_Resume.pdf"
-            download
+            href={resumeLink}
+            target="_blank"
             className="flex items-center gap-2 bg-purple-600 text-white px-5 py-2 rounded-full hover:bg-purple-700 transition"
           >
             <FaDownload />
