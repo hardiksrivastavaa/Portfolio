@@ -30,7 +30,7 @@ const Hero = () => {
             cursor
             cursorStyle="|"
             typeSpeed={70}
-            deleteSpeed={50}
+            deleteSpeed={70}
             delaySpeed={1500}
           />
         </h2>

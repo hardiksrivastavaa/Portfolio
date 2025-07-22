@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 const Footer = () => (
   <footer className="bg-gray-900 text-white w-full mt-auto">
 
-    <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col items-center gap-2 text-center">
+    {/* <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col items-center gap-2 text-center"> */}
 
       {/* Social Icons */}
       {/* <div className="flex gap-5 text-xl">
@@ -23,9 +23,9 @@ const Footer = () => (
 
       {/* Copyright */}
 
-      <p className="text-sm mt-2">&copy; {new Date().getFullYear()} Hardik Srivastava. All rights reserved.</p>
+      {/* <p className="text-sm mt-2">&copy; {new Date().getFullYear()} Hardik Srivastava. All rights reserved.</p>
 
-    </div>
+    </div> */}
   </footer>
 );
 
