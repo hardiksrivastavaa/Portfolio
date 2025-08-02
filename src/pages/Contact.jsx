@@ -1,8 +1,44 @@
-import React from "react";
+import React, { useRef } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import useAOS from "../hooks/useAOS";
 
 const Contact = () => {
-  useAOS(); // Initialize AOS animations
+  useAOS(); // AOS animations
+  const formRef = useRef(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: formRef.current.name.value,
+      email: formRef.current.email.value,
+      subject: formRef.current.subject.value,
+      message: formRef.current.message.value,
+    };
+
+    try {
+      const scriptUrl = "https://script.google.com/macros/s/AKfycbyZUETqhtg0i5vPMPo8FLZ_2pB2vdLZs0hMyetVEpZjx7qpRgGaoaLowMMcLpgBLG0CRw/exec";
+
+      fetch(scriptUrl, {
+        method: "POST",
+        mode: "no-cors", // won't give actual response
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      // Show toast regardless of fetch result (due to no-cors)
+      toast.success("Message sent successfully! 🚀");
+
+      // Optional: clear the form
+      formRef.current.reset();
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error("Failed to send. Try again later.");
+    }
+  };
 
   return (
     <section className="max-w-md mx-auto py-12 px-4" data-aos="fade-up">
@@ -12,8 +48,8 @@ const Contact = () => {
       </p>
 
       <form
-        action="https://formspree.io/f/mnqeknbz"
-        method="POST"
+        ref={formRef}
+        onSubmit={handleSubmit}
         className="space-y-4"
         data-aos="fade-up"
         data-aos-delay="100"
@@ -29,6 +65,13 @@ const Contact = () => {
           type="email"
           name="email"
           placeholder="Your Email"
+          required
+          className="w-full border border-gray-300 p-2 rounded"
+        />
+        <input
+          type="text"
+          name="subject"
+          placeholder="Your Subject"
           required
           className="w-full border border-gray-300 p-2 rounded"
         />
@@ -68,11 +111,22 @@ const Contact = () => {
           href="https://github.com/hardiksrivastavaa"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-800 hover:underline"
+          className="text-blue-600 hover:underline"
         >
           GitHub
         </a>
       </div>
+
+      {/* Toast container */}
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        theme="colored"
+      />
     </section>
   );
 };
