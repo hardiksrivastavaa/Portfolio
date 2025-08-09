@@ -17,7 +17,7 @@ const About = () => {
       <div className="bg-white shadow-lg rounded-xl p-6 md:p-8 leading-relaxed text-lg text-gray-700 space-y-6">
         <p>
           I&apos;m <span className="font-semibold text-gray-900">Hardik Srivastava</span>, 
-          a web developer from <span className="text-purple-600 font-medium">Raebareli, Uttar Pradesh</span> 
+          a web developer from <span className="text-purple-600 font-medium">Raebareli, Uttar Pradesh  </span> 
           with a passion for building impactful and user-friendly digital experiences.
         </p>
 

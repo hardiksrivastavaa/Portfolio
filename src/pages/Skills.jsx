@@ -28,7 +28,7 @@ const Skills = () => {
   return (
     <section className="py-20 px-4 max-w-7xl mx-auto" data-aos="fade-up">
       <h2 className="text-4xl font-bold text-center mb-14 text-gray-900">
-        💻 Skills & Tech Stack
+        Skills & Tech Stack
       </h2>
 
       <div className="space-y-16">
