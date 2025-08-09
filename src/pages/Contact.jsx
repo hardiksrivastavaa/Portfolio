@@ -2,9 +2,10 @@ import React, { useRef } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useAOS from "../hooks/useAOS";
+import contactInfo from "../utils/contactInfo";
 
 const Contact = () => {
-  useAOS(); // AOS animations
+  useAOS();
   const formRef = useRef(null);
 
   const handleSubmit = async (e) => {
@@ -18,21 +19,19 @@ const Contact = () => {
     };
 
     try {
-      const scriptUrl = "https://script.google.com/macros/s/AKfycbyZUETqhtg0i5vPMPo8FLZ_2pB2vdLZs0hMyetVEpZjx7qpRgGaoaLowMMcLpgBLG0CRw/exec";
+      const scriptUrl =
+        "https://script.google.com/macros/s/AKfycbyZUETqhtg0i5vPMPo8FLZ_2pB2vdLZs0hMyetVEpZjx7qpRgGaoaLowMMcLpgBLG0CRw/exec";
 
       fetch(scriptUrl, {
         method: "POST",
-        mode: "no-cors", // won't give actual response
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
 
-      // Show toast regardless of fetch result (due to no-cors)
       toast.success("Message sent successfully! 🚀");
-
-      // Optional: clear the form
       formRef.current.reset();
     } catch (error) {
       console.error("Error:", error);
@@ -41,12 +40,22 @@ const Contact = () => {
   };
 
   return (
-    <section className="max-w-md mx-auto py-12 px-4" data-aos="fade-up">
-      <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>
-      <p className="text-center text-gray-700 mb-6">
-        Got an opportunity, feedback, or collaboration idea? Let's connect!
+    <section
+      className="max-w-lg mx-auto py-16 px-6"
+      data-aos="fade-up"
+    >
+      {/* Heading */}
+      <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-center text-gray-900 relative">
+        Contact Me
+        <span className="block w-20 h-1 bg-purple-600 mx-auto mt-3 rounded-full"></span>
+      </h2>
+
+      {/* Description */}
+      <p className="text-center text-gray-700 mb-8">
+        Got an opportunity, feedback, or collaboration idea? Let’s connect!
       </p>
 
+      {/* Form */}
       <form
         ref={formRef}
         onSubmit={handleSubmit}
@@ -59,70 +68,65 @@ const Contact = () => {
           name="name"
           placeholder="Your Name"
           required
-          className="w-full border border-gray-300 p-2 rounded"
+          className="w-full border border-gray-300 p-3 rounded-lg"
         />
         <input
           type="email"
           name="email"
           placeholder="Your Email"
           required
-          className="w-full border border-gray-300 p-2 rounded"
+          className="w-full border border-gray-300 p-3 rounded-lg"
         />
         <input
           type="text"
           name="subject"
           placeholder="Your Subject"
           required
-          className="w-full border border-gray-300 p-2 rounded"
+          className="w-full border border-gray-300 p-3 rounded-lg"
         />
         <textarea
           name="message"
           placeholder="Your Message"
           rows="5"
           required
-          className="w-full border border-gray-300 p-2 rounded"
+          className="w-full border border-gray-300 p-3 rounded-lg"
         ></textarea>
         <button
           type="submit"
-          className="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition"
+          className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors"
         >
           Send Message
         </button>
       </form>
 
+      {/* Contact Info */}
       <div
         className="mt-8 text-center text-sm text-gray-600"
         data-aos="fade-up"
         data-aos-delay="200"
       >
         or reach me directly at <br />
-        <strong>hardikfgp@gmail.com</strong>
-        <br />
-        <a
-          href="https://linkedin.com/in/hardiksrivastavaa"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
-        >
-          LinkedIn
-        </a>{" "}
-        |{" "}
-        <a
-          href="https://github.com/hardiksrivastavaa"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
-        >
-          GitHub
-        </a>
+        <strong>{contactInfo.email}</strong>
+        <div className="mt-2 space-x-3">
+          {contactInfo.socials.map((social, index) => (
+            <a
+              key={index}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              {social.name}
+            </a>
+          ))}
+        </div>
       </div>
 
-      {/* Toast container */}
+      {/* Toast */}
       <ToastContainer
         position="top-right"
         autoClose={3000}
         hideProgressBar={false}
-        newestOnTop={false}
         closeOnClick
         pauseOnHover
         theme="colored"

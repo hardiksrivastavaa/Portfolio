@@ -26,26 +26,28 @@ const Skills = () => {
   useAOS();
 
   return (
-    <section className="max-w-4xl mx-auto py-12 px-4" data-aos="fade-up">
-      <h2 className="text-3xl font-bold mb-10 text-center">
+    <section className="py-20 px-4 max-w-7xl mx-auto" data-aos="fade-up">
+      <h2 className="text-4xl font-bold text-center mb-14 text-gray-900">
         💻 Skills & Tech Stack
       </h2>
 
-      <div className="space-y-10 text-gray-800">
+      <div className="space-y-16">
         <SkillCategory
           title="🧠 Programming Languages"
           skills={[
             {
               icon: <FaJs />,
               label: "JavaScript",
-              color: "bg-yellow-100 hover:bg-yellow-200",
-              iconColor: "text-yellow-500",
+              bg: "bg-yellow-100",
+              hover: "hover:bg-yellow-200",
+              color: "text-yellow-500",
             },
             {
               icon: <FaJava />,
               label: "Java",
-              color: "bg-red-100 hover:bg-red-200",
-              iconColor: "text-red-700",
+              bg: "bg-red-100",
+              hover: "hover:bg-red-200",
+              color: "text-red-700",
             },
           ]}
         />
@@ -56,32 +58,37 @@ const Skills = () => {
             {
               icon: <FaHtml5 />,
               label: "HTML",
-              color: "bg-orange-100 hover:bg-orange-200",
-              iconColor: "text-orange-600",
+              bg: "bg-orange-100",
+              hover: "hover:bg-orange-200",
+              color: "text-orange-600",
             },
             {
               icon: <FaCss3Alt />,
               label: "CSS",
-              color: "bg-blue-100 hover:bg-blue-200",
-              iconColor: "text-blue-600",
+              bg: "bg-blue-100",
+              hover: "hover:bg-blue-200",
+              color: "text-blue-600",
             },
             {
               icon: <FaBootstrap />,
               label: "Bootstrap",
-              color: "bg-purple-100 hover:bg-purple-200",
-              iconColor: "text-purple-700",
+              bg: "bg-purple-100",
+              hover: "hover:bg-purple-200",
+              color: "text-purple-700",
             },
             {
               icon: <SiTailwindcss />,
               label: "Tailwind CSS",
-              color: "bg-sky-100 hover:bg-sky-200",
-              iconColor: "text-sky-500",
+              bg: "bg-sky-100",
+              hover: "hover:bg-sky-200",
+              color: "text-sky-500",
             },
             {
               icon: <FaReact />,
               label: "React.js",
-              color: "bg-blue-100 hover:bg-blue-200",
-              iconColor: "text-blue-500",
+              bg: "bg-blue-100",
+              hover: "hover:bg-blue-200",
+              color: "text-blue-500",
             },
           ]}
         />
@@ -92,14 +99,16 @@ const Skills = () => {
             {
               icon: <FaNodeJs />,
               label: "Node.js",
-              color: "bg-green-100 hover:bg-green-200",
-              iconColor: "text-green-600",
+              bg: "bg-green-100",
+              hover: "hover:bg-green-200",
+              color: "text-green-600",
             },
             {
               icon: <SiExpress />,
               label: "Express.js",
-              color: "bg-gray-100 hover:bg-gray-200",
-              iconColor: "text-gray-800",
+              bg: "bg-gray-100",
+              hover: "hover:bg-gray-200",
+              color: "text-gray-800",
             },
           ]}
         />
@@ -110,14 +119,16 @@ const Skills = () => {
             {
               icon: <SiMongodb />,
               label: "MongoDB",
-              color: "bg-green-100 hover:bg-green-200",
-              iconColor: "text-green-700",
+              bg: "bg-green-100",
+              hover: "hover:bg-green-200",
+              color: "text-green-700",
             },
             {
               icon: <SiMysql />,
               label: "MySQL",
-              color: "bg-blue-100 hover:bg-blue-200",
-              iconColor: "text-blue-700",
+              bg: "bg-blue-100",
+              hover: "hover:bg-blue-200",
+              color: "text-blue-700",
             },
           ]}
         />
@@ -128,38 +139,44 @@ const Skills = () => {
             {
               icon: <FaGithub />,
               label: "GitHub",
-              color: "bg-gray-100 hover:bg-gray-200",
-              iconColor: "text-black",
+              bg: "bg-gray-100",
+              hover: "hover:bg-gray-200",
+              color: "text-black",
             },
             {
               icon: <FaGitAlt />,
               label: "Git",
-              color: "bg-orange-100 hover:bg-orange-200",
-              iconColor: "text-orange-600",
+              bg: "bg-orange-100",
+              hover: "hover:bg-orange-200",
+              color: "text-orange-600",
             },
             {
               icon: <VscVscode />,
               label: "VS Code",
-              color: "bg-blue-100 hover:bg-blue-200",
-              iconColor: "text-blue-500",
+              bg: "bg-blue-100",
+              hover: "hover:bg-blue-200",
+              color: "text-blue-500",
             },
             {
               icon: <SiPostman />,
               label: "Postman",
-              color: "bg-orange-100 hover:bg-orange-200",
-              iconColor: "text-orange-500",
+              bg: "bg-orange-100",
+              hover: "hover:bg-orange-200",
+              color: "text-orange-500",
             },
             {
               icon: <SiCloudinary />,
               label: "Cloudinary",
-              color: "bg-indigo-100 hover:bg-indigo-200",
-              iconColor: "text-indigo-500",
+              bg: "bg-indigo-100",
+              hover: "hover:bg-indigo-200",
+              color: "text-indigo-500",
             },
             {
               icon: <FaDatabase />,
               label: "MongoDB Atlas",
-              color: "bg-gray-100 hover:bg-gray-200",
-              iconColor: "text-gray-700",
+              bg: "bg-gray-100",
+              hover: "hover:bg-gray-200",
+              color: "text-gray-700",
             },
           ]}
         />
@@ -169,16 +186,18 @@ const Skills = () => {
 };
 
 const SkillCategory = ({ title, skills }) => (
-  <div>
-    <h3 className="text-xl font-semibold mb-3">{title}</h3>
-    <div className="flex flex-wrap gap-4">
+  <div data-aos="fade-up">
+    <h3 className="text-2xl font-semibold mb-6 text-gray-900">{title}</h3>
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
       {skills.map((skill, index) => (
         <div
           key={index}
-          className={`flex items-center gap-2 px-4 py-2 rounded-lg shadow-sm transition ${skill.color}`}
+          className={`flex flex-col items-center p-5 rounded-3xl shadow-md border border-gray-200 transition transform hover:scale-105 ${skill.bg} ${skill.hover}`}
         >
-          <span className={`text-xl ${skill.iconColor}`}>{skill.icon}</span>
-          <span className="text-sm font-medium">{skill.label}</span>
+          <span className={`text-3xl mb-2 ${skill.color}`}>{skill.icon}</span>
+          <span className="text-sm font-medium text-gray-800">
+            {skill.label}
+          </span>
         </div>
       ))}
     </div>

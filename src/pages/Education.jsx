@@ -1,105 +1,128 @@
 import React from "react";
 import useAOS from "../hooks/useAOS";
-import deltaCertificate from "/certificates/mern.jpg";
+import mernCert from "/certificates/mern.jpg";
 
 const Education = () => {
-  useAOS(); // Initialize AOS globally
+  useAOS();
+
+  const educationData = [
+    {
+      title: "Diploma in Computer Science & Engineering",
+      institution: "Feroze Gandhi Polytechnic, Raebareli",
+      duration: "Sept 2022 – July 2025",
+      percentage: "80%",
+    },
+    {
+      title: "Intermediate (PCM)",
+      institution: "Baishwara Inter College, Lalganj",
+      duration: "2022",
+      percentage: "75.2%",
+    },
+    {
+      title: "High School",
+      institution: "Alok Higher Secondary School, Lalganj",
+      duration: "2020",
+      percentage: "85%",
+    },
+  ];
+
+  const certifications = [
+    {
+      title: "Full Stack Web Development – MERN",
+      issuer: "Apna College",
+      issued: "Jan 2025",
+      credentialId: "659e5afc7fa67ec97205fc76",
+      credentialUrl: "https://mycourse.app/K5pfH6VAYPodRZ4DA",
+      image: mernCert,
+    },
+  ];
 
   return (
-    <section className="max-w-3xl mx-auto py-16 px-4" data-aos="fade-up">
-      {/* Section Heading */}
-      <h2 className="text-3xl font-bold text-center mb-12">🎓 Education</h2>
-
-      <div className="space-y-10">
-        {/* Diploma */}
-        <div
-          className="border-l-4 border-purple-600 pl-5"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <h3 className="text-xl font-semibold text-gray-800 mb-1">
-            Diploma in Computer Science & Engineering
-          </h3>
-          <p className="text-gray-700">
-            Feroze Gandhi Polytechnic, Raebareli <br />
-            <span className="text-sm text-gray-600">
-              Sept 2022 – July 2025
-            </span>{" "}
-            <br />
-            <strong>Percentage:</strong> 80%
-          </p>
-        </div>
-
-        {/* Intermediate */}
-        <div
-          className="border-l-4 border-purple-600 pl-5"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <h3 className="text-xl font-semibold text-gray-800 mb-1">
-            Intermediate (PCM)
-          </h3>
-          <p className="text-gray-700">
-            Baishwara Inter College, Lalganj <br />
-            <span className="text-sm text-gray-600">2022</span> <br />
-            <strong>Percentage:</strong> 75.2%
-          </p>
-        </div>
-
-        {/* High School */}
-        <div
-          className="border-l-4 border-purple-600 pl-5"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          <h3 className="text-xl font-semibold text-gray-800 mb-1">
-            High School
-          </h3>
-          <p className="text-gray-700">
-            Alok Higher Secondary School, Lalganj <br />
-            <span className="text-sm text-gray-600">2020</span> <br />
-            <strong>Percentage:</strong> 85%
-          </p>
-        </div>
-      </div>
-
-      {/* Certifications */}
-      <h2 className="text-3xl font-bold text-center mt-16 mb-10">
-        📜 Certifications
+    <section className="max-w-4xl mx-auto py-16 px-6" data-aos="fade-up">
+      {/* Heading */}
+      <h2 className="text-3xl md:text-4xl font-extrabold mb-12 text-center text-gray-900 relative">
+        Education
+        <span className="block w-20 h-1 bg-purple-600 mx-auto mt-3 rounded-full"></span>
       </h2>
 
-      <div
-        className=""
-        data-aos="fade-up"
-        data-aos-delay="400"
-      >
-        <div className="flex flex-col md:flex-row gap-6 items-start">
-          {/* Certification Details */}
-          <div className="flex-1 text-gray-700 border-l-4 border-purple-600 pl-5">
-            <h3 className="text-lg font-semibold mb-1">
-              Full Stack Web Development – MERN
-            </h3>
-            Apna College · Issued Jan 2025 <br />
-            Credential ID:{" "}
-            <a
-              href="https://mycourse.app/K5pfH6VAYPodRZ4DA"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-purple-700 underline hover:text-purple-900 transition"
-            >
-              659e5afc7fa67ec97205fc76
-            </a>
-          </div>
+      {/* Timeline */}
+      <div className="relative border-l-4 border-purple-600 pl-6 space-y-12">
+        {educationData.map((edu, index) => (
+          <div
+            key={index}
+            className="relative bg-white shadow-md rounded-lg p-6 transition-transform hover:scale-[1.02] hover:shadow-lg"
+            data-aos="fade-up"
+            data-aos-delay={100 * (index + 1)}
+          >
+            {/* Dot on timeline */}
+            <div className="absolute -left-[14px] top-6 w-6 h-6 rounded-full bg-purple-600 border-4 border-white shadow"></div>
 
-          {/* Certificate Image */}
-          <div className="w-full md:w-60 border rounded-lg overflow-hidden shadow">
-            <img
-              src={deltaCertificate}
-              alt="Full Stack MERN Certificate"
-              className="w-full h-full object-cover"
-            />
+            {/* Title */}
+            <h3 className="text-xl font-semibold text-gray-900">
+              {edu.title}
+            </h3>
+            <p className="text-sm text-purple-600 font-medium">
+              {edu.institution}
+            </p>
+
+            {/* Meta Info */}
+            <div className="mt-2 text-sm text-gray-600 space-y-1">
+              <p>
+                <strong>Duration:</strong> {edu.duration}
+              </p>
+              <p>
+                <strong>Percentage:</strong> {edu.percentage}
+              </p>
+            </div>
           </div>
-        </div>
+        ))}
+
+        {/* Certifications */}
+        {certifications.map((cert, index) => (
+          <div
+            key={index}
+            className="relative bg-white shadow-md rounded-lg p-6 transition-transform hover:scale-[1.02] hover:shadow-lg"
+            data-aos="fade-up"
+            data-aos-delay={100 * (educationData.length + index + 1)}
+          >
+            {/* Dot */}
+            <div className="absolute -left-[14px] top-6 w-6 h-6 rounded-full bg-purple-600 border-4 border-white shadow"></div>
+
+            <h3 className="text-xl font-semibold text-gray-900">
+              {cert.title}
+            </h3>
+            <p className="text-sm text-purple-600 font-medium">
+              {cert.issuer}
+            </p>
+
+            <div className="mt-2 text-sm text-gray-600 space-y-1">
+              <p>
+                <strong>Issued:</strong> {cert.issued}
+              </p>
+              <p>
+                <strong>Credential ID:</strong>{" "}
+                <a
+                  href={cert.credentialUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-purple-700 underline hover:text-purple-900 transition"
+                >
+                  {cert.credentialId}
+                </a>
+              </p>
+            </div>
+
+            {cert.image && (
+              <div className="mt-4 w-full md:w-64 rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                <img
+                  src={cert.image}
+                  alt={`${cert.title} Certificate`}
+                  className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );

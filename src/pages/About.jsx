@@ -5,25 +5,55 @@ const About = () => {
   useAOS();
 
   return (
-    <div className="max-w-3xl mx-auto py-12 px-4" data-aos="fade-up">
-      <h2 className="text-3xl font-bold mb-6 text-center">About Me</h2>
+    <section
+      className="max-w-4xl mx-auto py-16 px-6"
+      data-aos="fade-up"
+    >
+      <h2 className="text-3xl md:text-4xl font-extrabold mb-8 text-center text-gray-900 relative">
+        About Me
+        <span className="block w-20 h-1 bg-purple-600 mx-auto mt-3 rounded-full"></span>
+      </h2>
 
-      <p className="text-gray-700 leading-relaxed text-lg">
-        I'm Hardik Srivastava, a web developer from Raebareli, Uttar Pradesh, with a strong passion for building impactful and user-friendly digital experiences.
-        <br />
-        <br />
-        I specialize in full-stack development using the <strong>MERN stack (MongoDB, Express.js, React.js, Node.js)</strong>, along with core technologies like <strong>HTML, CSS, and JavaScript</strong>. I enjoy crafting clean, responsive UIs with <strong>Tailwind CSS</strong> and <strong>Bootstrap</strong>, and building robust backend systems to bring ideas to life.
-        <br />
-        <br />
-        I’ve worked on real-world projects including a cloud file manager, a front-page generator used by over 1000 students, and an Airbnb-inspired full-stack rental platform — all of which sharpened my technical skills and problem-solving mindset.
-        <br />
-        <br />
-        I’m also experienced with modern development tools and platforms like <strong>Git, GitHub, Vercel</strong> for deployment, <strong>Cloudinary</strong> for media handling, and <strong>MongoDB Atlas</strong> for cloud database hosting.
-        <br />
-        <br />
-        I'm currently open to internship and entry-level opportunities where I can contribute, learn from experienced teams, and grow in a collaborative and fast-paced environment.
-      </p>
-    </div>
+      <div className="bg-white shadow-lg rounded-xl p-6 md:p-8 leading-relaxed text-lg text-gray-700 space-y-6">
+        <p>
+          I&apos;m <span className="font-semibold text-gray-900">Hardik Srivastava</span>, 
+          a web developer from <span className="text-purple-600 font-medium">Raebareli, Uttar Pradesh</span> 
+          with a passion for building impactful and user-friendly digital experiences.
+        </p>
+
+        <p>
+          I specialize in full-stack development using the{" "}
+          <strong>MERN stack (MongoDB, Express.js, React.js, Node.js)</strong> 
+          and core technologies like <strong>HTML, CSS, and JavaScript</strong>. 
+          I enjoy crafting clean, responsive UIs with{" "}
+          <strong>Tailwind CSS</strong> and <strong>Bootstrap</strong>, while 
+          also developing robust backend systems to bring ideas to life.
+        </p>
+
+        <p>
+          My portfolio includes real-world projects like a{" "}
+          <em>cloud file manager</em>, a{" "}
+          <em>front-page generator used by over 1000 students</em>, 
+          and an <em>Airbnb-inspired rental platform</em>. 
+          These experiences have sharpened both my technical skills and my 
+          problem-solving mindset.
+        </p>
+
+        <p>
+          I&apos;m familiar with modern tools and platforms such as{" "}
+          <strong>Git, GitHub, Vercel</strong> for deployment,{" "}
+          <strong>Cloudinary</strong> for media handling, and{" "}
+          <strong>MongoDB Atlas</strong> for cloud database hosting.
+        </p>
+
+        <p>
+          I&apos;m currently open to <span className="font-semibold">internship</span> 
+          and <span className="font-semibold">entry-level</span> opportunities 
+          where I can contribute, learn from experienced teams, and grow in 
+          a collaborative, fast-paced environment.
+        </p>
+      </div>
+    </section>
   );
 };
 
