@@ -7,10 +7,15 @@ const Education = () => {
 
   const educationData = [
     {
+      title: "B.Tech. in Computer Science and Engineering (Data Science)",
+      institution: "G.C.R.G Group of Institutions, Lucknow",
+      duration: " Sept. 2025– Jul. 2028",
+    },
+    {
       title: "Diploma in Computer Science & Engineering",
       institution: "Feroze Gandhi Polytechnic, Raebareli",
       duration: "Sept 2022 – July 2025",
-      percentage: "80%",
+      percentage: "77%",
     },
     {
       title: "Intermediate (PCM)",
@@ -70,9 +75,9 @@ const Education = () => {
               <p>
                 <strong>Duration:</strong> {edu.duration}
               </p>
-              <p>
+              { edu.percentage && <p>
                 <strong>Percentage:</strong> {edu.percentage}
-              </p>
+              </p> }
             </div>
           </div>
         ))}
