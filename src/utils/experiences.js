@@ -11,7 +11,7 @@ const experiences = [
   },
 
   {
-    title: "Softpro India Computer Technologies",
+    title: "Softpro India Computer Technologies Pvt. Ltd.",
     role: "Summer Trainee",
     duration: "Jul. 2024 – Sep. 2024",
     type: "On-site",
