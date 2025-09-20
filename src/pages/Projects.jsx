@@ -23,7 +23,6 @@ const Projects = () => {
             className="group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col"
             data-aos="fade-up"
             data-aos-delay={index * 100}
-            onClick={() => setSelectedProject(project)} // 🔥 open modal on click
           >
             {/* Image */}
             <div className="relative w-full aspect-video overflow-hidden">
@@ -41,12 +40,19 @@ const Projects = () => {
                 {project.title}
               </h3>
 
-              <p className="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-3">
+              {/* Short Description with Read More */}
+              <p className="text-gray-600 text-sm mb-2 leading-relaxed line-clamp-3">
                 {project.description}
               </p>
+              <button
+                onClick={() => setSelectedProject(project)}
+                className="text-purple-600 text-sm font-medium hover:underline mb-4 self-start"
+              >
+                Read More
+              </button>
 
               {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-3">
                 {project.tech.map((tech, i) => (
                   <span
                     key={i}
@@ -64,7 +70,6 @@ const Projects = () => {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()} // prevent modal on button click
                     className="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-full text-sm hover:bg-purple-700 transition"
                   >
                     <FaExternalLinkAlt />
@@ -76,7 +81,6 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
                     className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-full text-sm hover:bg-black transition"
                   >
                     <FaGithub />
