@@ -19,6 +19,11 @@ import {
   SiExpress,
   SiPostman,
   SiCloudinary,
+  SiRedux,
+  SiReactrouter,
+  SiVercel,
+  SiJsonwebtokens,
+  SiPassport,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
@@ -32,6 +37,7 @@ const Skills = () => {
       </h2>
 
       <div className="space-y-16">
+        {/* Programming Languages */}
         <SkillCategory
           title="🧠 Programming Languages"
           skills={[
@@ -52,6 +58,7 @@ const Skills = () => {
           ]}
         />
 
+        {/* Frontend */}
         <SkillCategory
           title="🎨 Frontend Development"
           skills={[
@@ -90,9 +97,30 @@ const Skills = () => {
               hover: "hover:bg-blue-200",
               color: "text-blue-500",
             },
+            {
+              icon: <SiReactrouter />,
+              label: "React Router",
+              bg: "bg-red-100",
+              hover: "hover:bg-red-200",
+              color: "text-red-500",
+            },
+            {
+              icon: <SiRedux />,
+              label: "Redux",
+              bg: "bg-purple-100",
+              hover: "hover:bg-purple-200",
+              color: "text-purple-600",
+            },
+            {
+              label: "Context API",
+              bg: "bg-gray-100",
+              hover: "hover:bg-gray-200",
+              color: "text-gray-700",
+            },
           ]}
         />
 
+        {/* Backend */}
         <SkillCategory
           title="🛠️ Backend Development"
           skills={[
@@ -110,9 +138,16 @@ const Skills = () => {
               hover: "hover:bg-gray-200",
               color: "text-gray-800",
             },
+            {
+              label: "RESTful APIs",
+              bg: "bg-yellow-100",
+              hover: "hover:bg-yellow-200",
+              color: "text-yellow-600",
+            },
           ]}
         />
 
+        {/* Databases */}
         <SkillCategory
           title="📊 Databases"
           skills={[
@@ -133,22 +168,23 @@ const Skills = () => {
           ]}
         />
 
+        {/* Tools & Platforms */}
         <SkillCategory
           title="⚙️ Tools & Platforms"
           skills={[
-            {
-              icon: <FaGithub />,
-              label: "GitHub",
-              bg: "bg-gray-100",
-              hover: "hover:bg-gray-200",
-              color: "text-black",
-            },
             {
               icon: <FaGitAlt />,
               label: "Git",
               bg: "bg-orange-100",
               hover: "hover:bg-orange-200",
               color: "text-orange-600",
+            },
+            {
+              icon: <FaGithub />,
+              label: "GitHub",
+              bg: "bg-gray-100",
+              hover: "hover:bg-gray-200",
+              color: "text-black",
             },
             {
               icon: <VscVscode />,
@@ -178,6 +214,77 @@ const Skills = () => {
               hover: "hover:bg-gray-200",
               color: "text-gray-700",
             },
+            {
+              icon: <SiVercel />,
+              label: "Vercel",
+              bg: "bg-black text-white",
+              hover: "hover:bg-gray-800",
+              color: "text-white",
+            },
+          ]}
+        />
+
+        {/* Other Skills */}
+        <SkillCategory
+          title="📌 Other Skills"
+          skills={[
+            {
+              label: "EJS",
+              bg: "bg-green-100",
+              hover: "hover:bg-green-200",
+              color: "text-green-700",
+            },
+            {
+              icon: <SiJsonwebtokens />,
+              label: "JWT",
+              bg: "bg-red-100",
+              hover: "hover:bg-red-200",
+              color: "text-red-600",
+            },
+            {
+              icon: <SiPassport />,
+              label: "Passport.js",
+              bg: "bg-blue-100",
+              hover: "hover:bg-blue-200",
+              color: "text-blue-600",
+            },
+            {
+              label: "Bcrypt.js",
+              bg: "bg-yellow-100",
+              hover: "hover:bg-yellow-200",
+              color: "text-yellow-700",
+            },
+            {
+              label: "OAuth",
+              bg: "bg-purple-100",
+              hover: "hover:bg-purple-200",
+              color: "text-purple-600",
+            },
+            {
+              label: "MVC Architecture",
+              bg: "bg-gray-100",
+              hover: "hover:bg-gray-200",
+              color: "text-gray-700",
+            },
+            {
+              label: "Responsive Web Design",
+              bg: "bg-sky-100",
+              hover: "hover:bg-sky-200",
+              color: "text-sky-600",
+            },
+          ]}
+        />
+
+        {/* Soft Skills */}
+        <SkillCategory
+          title="🤝 Soft Skills"
+          skills={[
+            { label: "Problem Solving", bg: "bg-green-100", hover: "hover:bg-green-200", color: "text-green-700" },
+            { label: "Teamwork", bg: "bg-blue-100", hover: "hover:bg-blue-200", color: "text-blue-700" },
+            { label: "Leadership", bg: "bg-purple-100", hover: "hover:bg-purple-200", color: "text-purple-700" },
+            { label: "Time Management", bg: "bg-yellow-100", hover: "hover:bg-yellow-200", color: "text-yellow-700" },
+            { label: "Public Speaking", bg: "bg-red-100", hover: "hover:bg-red-200", color: "text-red-600" },
+            { label: "Work Ethic", bg: "bg-gray-100", hover: "hover:bg-gray-200", color: "text-gray-700" },
           ]}
         />
       </div>
@@ -194,10 +301,8 @@ const SkillCategory = ({ title, skills }) => (
           key={index}
           className={`flex flex-col items-center p-5 rounded-3xl shadow-md border border-gray-200 transition transform hover:scale-105 ${skill.bg} ${skill.hover}`}
         >
-          <span className={`text-3xl mb-2 ${skill.color}`}>{skill.icon}</span>
-          <span className="text-sm font-medium text-gray-800">
-            {skill.label}
-          </span>
+          {skill.icon && <span className={`text-3xl mb-2 ${skill.color}`}>{skill.icon}</span>}
+          <span className={`text-sm font-medium ${skill.color}`}>{skill.label}</span>
         </div>
       ))}
     </div>
