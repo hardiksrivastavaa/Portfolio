@@ -39,11 +39,6 @@ const Experience = () => {
               <p>
                 <strong>Duration:</strong> {exp.duration}
               </p>
-              {exp.location && (
-                <p>
-                  <strong>Location:</strong> {exp.location}
-                </p>
-              )}
               {exp.type && (
                 <p>
                   <strong>Type:</strong> {exp.type}
