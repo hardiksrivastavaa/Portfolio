@@ -40,53 +40,43 @@ const Projects = () => {
                 {project.title}
               </h3>
 
-              {/* Short Description with Read More */}
+              {/* Short Description */}
               <p className="text-gray-600 text-sm mb-2 leading-relaxed line-clamp-3">
                 {project.description}
               </p>
-              <button
-                onClick={() => setSelectedProject(project)}
-                className="text-purple-600 text-sm font-medium hover:underline mb-4 self-start"
-              >
-                Read More
-              </button>
 
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mb-3">
-                {project.tech.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="bg-purple-100 text-purple-700 px-3 py-1 text-xs rounded-full font-medium"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex gap-3 mt-auto">
-                {project.live && (
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-full text-sm hover:bg-purple-700 transition"
-                  >
-                    <FaExternalLinkAlt />
-                    Live
-                  </a>
-                )}
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-full text-sm hover:bg-black transition"
-                  >
-                    <FaGithub />
-                    GitHub
-                  </a>
-                )}
+              {/* Read More + Buttons (together, no big gap) */}
+              <div className="flex flex-col gap-2 mb-4">
+                <button
+                  onClick={() => setSelectedProject(project)}
+                  className="text-purple-600 text-sm font-medium hover:underline self-start"
+                >
+                  Read More
+                </button>
+                <div className="flex gap-3">
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-full text-sm hover:bg-purple-700 transition"
+                    >
+                      <FaExternalLinkAlt />
+                      Live
+                    </a>
+                  )}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-full text-sm hover:bg-black transition"
+                    >
+                      <FaGithub />
+                      GitHub
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>
@@ -113,7 +103,7 @@ const Projects = () => {
               {selectedProject.description}
             </p>
 
-            {/* Tech Stack */}
+            {/* Tech Stack inside modal only */}
             <div className="flex flex-wrap gap-2 mb-6">
               {selectedProject.tech.map((tech, i) => (
                 <span
