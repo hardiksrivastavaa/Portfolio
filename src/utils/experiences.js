@@ -14,7 +14,7 @@ const experiences = [
     title: "Softpro India Computer Technologies",
     role: "Summer Trainee",
     duration: "Jul. 2024 – Sep. 2024",
-    location: "Lucknow",
+    type: "On-site",
     description: "Worked with Spring Boot, Core Java, and REST APIs during an internship focused on enterprise app development.",
     image: "/certificates/spi.jpg",
     borderColor: "border-orange-500"
