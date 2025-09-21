@@ -16,41 +16,44 @@ const About = () => {
 
       <div className="bg-white shadow-lg rounded-xl p-6 md:p-8 leading-relaxed text-lg text-gray-700 space-y-6">
         <p>
-          I&apos;m <span className="font-semibold text-gray-900">Hardik Srivastava</span>, 
-          a web developer from <span className="text-purple-600 font-medium">Raebareli, Uttar Pradesh  </span> 
-          with a passion for building impactful and user-friendly digital experiences.
+          Hi, I&apos;m <span className="font-semibold text-gray-900">Hardik Srivastava</span>, 
+          a <span className="text-purple-600 font-medium">Full Stack MERN Developer</span> 
+          from Raebareli, Uttar Pradesh with a strong foundation in{" "}
+          <strong>JavaScript, Java, and the MERN stack (MongoDB, Express.js, React.js, Node.js)</strong>. 
+          I enjoy building scalable web apps with clean, responsive UIs and robust backends.
         </p>
 
         <p>
-          I specialize in full-stack development using the{" "}
-          <strong>MERN stack (MongoDB, Express.js, React.js, Node.js)</strong> 
-          and core technologies like <strong>HTML, CSS, and JavaScript</strong>. 
-          I enjoy crafting clean, responsive UIs with{" "}
-          <strong>Tailwind CSS</strong> and <strong>Bootstrap</strong>, while 
-          also developing robust backend systems to bring ideas to life.
+          I&apos;ve gained practical industry and cloud experience through{" "}
+          <strong>Google Arcade Facilitator Program</strong>, where I completed{" "}
+          420+ hands-on labs on Google Cloud Platform and achieved{" "}
+          <em>Legend Tier</em>, and at{" "}
+          <strong>Softpro India Pvt. Ltd.</strong>, where I trained in{" "}
+          <em>Core/Advanced Java and Spring Boot</em> while developing a client-side{" "}
+          Online Test Portal.
         </p>
 
         <p>
-          My portfolio includes real-world projects like a{" "}
-          <em>cloud file manager</em>, a{" "}
-          <em>front-page generator used by over 1000 students</em>, 
-          and an <em>Airbnb-inspired rental platform</em>. 
-          These experiences have sharpened both my technical skills and my 
-          problem-solving mindset.
+          My projects include{" "}
+          <em>Wanderlust – a full-stack Airbnb replica</em>,{" "}
+          <em>UserDrive – a cloud file storage app</em>, and{" "}
+          <em>Front Page Generator – used by 1000+ diploma students</em>. 
+          These experiences honed my skills in{" "}
+          <strong>authentication, REST APIs, cloud integration (MongoDB Atlas, Cloudinary),</strong> 
+          and following <strong>MVC architecture</strong>.
         </p>
 
         <p>
-          I&apos;m familiar with modern tools and platforms such as{" "}
-          <strong>Git, GitHub, Vercel</strong> for deployment,{" "}
-          <strong>Cloudinary</strong> for media handling, and{" "}
-          <strong>MongoDB Atlas</strong> for cloud database hosting.
+          I work with tools like <strong>Git, GitHub, Postman, VS Code, Vercel</strong> 
+          and technologies like <strong>Tailwind CSS, Bootstrap, EJS, JWT, Passport.js, OAuth</strong>. 
+          My focus is on writing clean, maintainable code and delivering real-world impact.
         </p>
 
         <p>
-          I&apos;m currently open to <span className="font-semibold">internship</span> 
-          and <span className="font-semibold">entry-level</span> opportunities 
-          where I can contribute, learn from experienced teams, and grow in 
-          a collaborative, fast-paced environment.
+          I&apos;m looking for <span className="font-semibold">internship</span> 
+          and <span className="font-semibold">entry-level opportunities</span> 
+          where I can apply my technical expertise, collaborate with teams, and 
+          continue growing in a fast-paced environment.
         </p>
       </div>
     </section>
