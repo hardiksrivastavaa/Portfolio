@@ -1,3 +1,4 @@
+
 // import React, { useRef } from "react";
 // import { toast, ToastContainer } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
@@ -250,39 +251,35 @@ const Contact = () => {
           <strong>hardiksrivastava.dev@gmail.com</strong>
         </p>
 
-        {/* Simple Social Links */}
-        <div className="flex justify-center gap-6 text-gray-700">
-          <a
-            href="http://linkedin.com/in/hardiksrivastavaa"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-purple-600 transition"
-          >
-            <FaLinkedin className="text-base" />
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/hardiksrivastavaa"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-purple-600 transition"
-          >
-            <FaGithub className="text-base" />
-            GitHub
-          </a>
-          <a
-            href="https://wa.me/917080825827"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-purple-600 transition"
-          >
-            <FaWhatsapp className="text-base" />
-            WhatsApp
-          </a>
-        </div>
-      </div>
+{/* Simple Social Icons */}
+<div className="flex justify-center gap-6 text-gray-700 text-2xl">
+  <a
+    href="http://linkedin.com/in/hardiksrivastavaa"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-purple-600 transition"
+  >
+    <FaLinkedin />
+  </a>
+  <a
+    href="https://github.com/hardiksrivastavaa"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-purple-600 transition"
+  >
+    <FaGithub />
+  </a>
+  <a
+    href="https://wa.me/917080825827"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-purple-600 transition"
+  >
+    <FaWhatsapp />
+  </a>
+</div>
 
-      {/* Toast */}
+        {/* Toast */}
       <ToastContainer
         position="top-right"
         autoClose={3000}
