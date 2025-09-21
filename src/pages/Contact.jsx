@@ -142,6 +142,7 @@ import React, { useRef } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useAOS from "../hooks/useAOS";
+import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   useAOS();
@@ -244,35 +245,36 @@ const Contact = () => {
         data-aos="fade-up"
         data-aos-delay="200"
       >
-        <p>
-          📍 Raebareli, Uttar Pradesh, India <br />
-          📞 +91 7080825827 <br />
-          ✉️ <strong>hardiksrivastava.dev@gmail.com</strong>
+        <p className="mb-4">
+          Raebareli, Uttar Pradesh, India <br />
+          <strong mail:to="hardiksrivastava.dev@gmail.com">hardiksrivastava.dev@gmail.com</strong>
         </p>
-        <div className="mt-3 space-x-3">
+
+        {/* Social Links with Icons */}
+        <div className="flex justify-center gap-4">
           <a
             href="http://linkedin.com/in/hardiksrivastavaa"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
+            className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 transition"
           >
-            LinkedIn
+            <FaLinkedin className="text-lg" /> LinkedIn
           </a>
           <a
             href="https://github.com/hardiksrivastavaa"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-900 hover:underline"
+            className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-full text-sm hover:bg-black transition"
           >
-            GitHub
+            <FaGithub className="text-lg" /> GitHub
           </a>
           <a
-            href="https://hardiksrivastava.vercel.app"
+            href="https://wa.me/917080825827"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-purple-600 hover:underline"
+            className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-full text-sm hover:bg-green-600 transition"
           >
-            Portfolio
+            <FaWhatsapp className="text-lg" /> WhatsApp
           </a>
         </div>
       </div>
