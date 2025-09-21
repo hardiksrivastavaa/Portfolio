@@ -246,35 +246,38 @@ const Contact = () => {
         data-aos-delay="200"
       >
         <p className="mb-4">
-          Raebareli, Uttar Pradesh, India <br />
-          <strong mail:to="hardiksrivastava.dev@gmail.com">hardiksrivastava.dev@gmail.com</strong>
+          📍 Raebareli, Uttar Pradesh, India <br />
+          <strong>hardiksrivastava.dev@gmail.com</strong>
         </p>
 
-        {/* Social Links with Icons */}
-        <div className="flex justify-center gap-4">
+        {/* Simple Social Links */}
+        <div className="flex justify-center gap-6 text-gray-700">
           <a
             href="http://linkedin.com/in/hardiksrivastavaa"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 transition"
+            className="flex items-center gap-2 hover:text-purple-600 transition"
           >
-            <FaLinkedin className="text-lg" /> LinkedIn
+            <FaLinkedin className="text-base" />
+            LinkedIn
           </a>
           <a
             href="https://github.com/hardiksrivastavaa"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-full text-sm hover:bg-black transition"
+            className="flex items-center gap-2 hover:text-purple-600 transition"
           >
-            <FaGithub className="text-lg" /> GitHub
+            <FaGithub className="text-base" />
+            GitHub
           </a>
           <a
             href="https://wa.me/917080825827"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-full text-sm hover:bg-green-600 transition"
+            className="flex items-center gap-2 hover:text-purple-600 transition"
           >
-            <FaWhatsapp className="text-lg" /> WhatsApp
+            <FaWhatsapp className="text-base" />
+            WhatsApp
           </a>
         </div>
       </div>
