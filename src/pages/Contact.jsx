@@ -278,6 +278,7 @@ const Contact = () => {
     <FaWhatsapp />
   </a>
 </div>
+        </div>
 
         {/* Toast */}
       <ToastContainer
