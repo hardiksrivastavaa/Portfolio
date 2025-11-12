@@ -30,7 +30,7 @@ const Home = () => {
 
       {/* Section: Projects */}
       <section className="min-h-screen bg-gray-200 flex items-center">
-        <Projects />
+        <Projects limit={3} />
       </section>
 
       {/* Section: Skills */}
