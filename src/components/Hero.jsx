@@ -78,7 +78,7 @@ const Hero = () => {
           <img
             src={profilePic}
             alt="Hardik Srivastava"
-            className="object-cover w-full h-full"
+            className="object-cover object-center w-full h-full"
           />
         </div>
         {/* Glow Effect */}
