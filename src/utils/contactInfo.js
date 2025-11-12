@@ -1,5 +1,5 @@
 const contactInfo = {
-  email: "hardikfgp@gmail.com",
+  email: "hardiksrivastava.dev@gmail.com",
   socials: [
     {
       name: "LinkedIn",
