@@ -9,6 +9,15 @@ const projects = [
     image: "/projects/project1.png",
   },
 
+{
+  title: "ShortLink – A URL Shortner",
+  description: "A fast and reliable web application that shortens long URLs using Node.js, Express.js, MongoDB, and React. Enables users to generate, manage, and track shortened links with real-time analytics such as click counts and timestamps. Implements input validation, error handling, and persistent storage for a smooth user experience. Deployed on Vercel & Render for a production-ready setup.",
+  tech: ["Node.js", "Express.js", "MongoDB", "React"],
+  live: "https://urlshortner-mern.vercel.app/",
+  github: "https://github.com/hardiksrivastavaa/ShortLink-MERN",
+  image: "/projects/project4.png",
+},
+
   {
     title: "UserDrive – Cloud File Storage App",
     description: "Developed a secure cloud-based file storage application to upload, organize, and manage files. Built with Node.js, Express.js, and MongoDB Atlas, with authentication handled using Express sessions. Integrated Cloudinary for optimized media uploads, ensuring scalable storage and delivery.",
