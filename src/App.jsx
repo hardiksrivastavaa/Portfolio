@@ -16,10 +16,12 @@ import Experience from "./pages/Experience";
 
 // Layout
 import Layout from "./components/Layout";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop behavior="smooth" />
       <Routes>
         {/* Layout Route wraps all other pages */}
         <Route path="/" element={<Layout />}>
